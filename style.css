@@ -1,14 +1,14 @@
-html{
-  padding: 0px;
-  margin: 0px;
-}
-/* fit entire window display and font choice*/
-body{
+/* fit entire window display and font choice */
+*{
   padding: 0px;
   margin: 0px;
   font-family: 'Dosis' ;
+}
+
+body{
   background-color: #3A2D32;
 }
+
 .header{
   text-align: center;
   background-color: #3A2D32;
@@ -20,21 +20,24 @@ body{
 }
 
 /*Uses flexbox as well as fixed*/
-.sideNav{
+ .sideNav{
   position: fixed;
   height: 100%;
   width: 25%;
   background-color: #DBB4AD;
   z-index: 1;
   text-align: center;
+  padding-top: 10px;
+}
+
+nav{
   display: flex;
-  align-content: space-between;
-  justify-content: center;
-  padding: 10px
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .mainContainer{
-  padding-top: 100px;
+  padding-top: 50px;
   position: absolute;
   right: 7px;
   width: 72%;
@@ -53,6 +56,12 @@ body{
   right: 0px;
   background-color: #A2AD91;
   color:#3A2D32;
+  padding-bottom: 30px;
+}
+
+.contentContainer > p {
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 /*flexbox used + even spacing betwene images*/
@@ -63,10 +72,9 @@ body{
   padding-bottom: 10px;
 }
 
-.thumbnail{
+.thumbnailContainer img{
   width: 33%
 }
-
 
 .sectionHeader{
   font-size: 32pt;
@@ -114,7 +122,7 @@ button:hover{
   opacity: 1;
 }
 /*links*/
-a{
+a, a:hover, a:active{
   color: #3A2D32;
   text-decoration: none;
 }
